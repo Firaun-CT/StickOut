@@ -1,16 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'next/link';
-
 import { urlFor } from '../lib/client';
 
 const HeroBanner = ({ heroBanner }) => {
-  // Split the smallText into an array of lines based on line breaks
   const smallTextLines = heroBanner.smallText.split('\n');
 
   return (
     <div className="hero-banner-container">
       <div className="hero-banner-content">
-        {/* Render each line of smallText in a separate <p> */}
         {smallTextLines.map((line, index) => (
           <p key={index} className="beats-solo">{line}</p>
         ))}
@@ -18,9 +16,8 @@ const HeroBanner = ({ heroBanner }) => {
         <h1>{heroBanner.largeText1}</h1>
         <h3>{heroBanner.largeText2}</h3>
 
-        {/* Add image and apply text wrapping */}
         <img src={urlFor(heroBanner.image)} alt="headphones" className="hero-banner-image" />
-        
+
         <div>
           <Link href={`/product/${heroBanner.product}`}>
             <button type="button">{heroBanner.buttonText}</button>
@@ -33,6 +30,19 @@ const HeroBanner = ({ heroBanner }) => {
       </div>
     </div>
   );
-}
+};
+
+HeroBanner.propTypes = {
+  heroBanner: PropTypes.shape({
+    smallText: PropTypes.string,
+    largeText1: PropTypes.string,
+    largeText2: PropTypes.string,
+    image: PropTypes.object, // You can make this stricter if needed
+    product: PropTypes.string,
+    buttonText: PropTypes.string,
+    desc: PropTypes.string,
+  }).isRequired
+};
 
 export default HeroBanner;
+

@@ -4,6 +4,7 @@ import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-
 import { client, urlFor } from '../../lib/client';
 import { Product } from '../../components';
 import { useStateContext } from '../../context/StateContext';
+import PropTypes from 'prop-types';
 
 const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
@@ -116,5 +117,24 @@ export const getStaticProps = async ({ params: { slug }}) => {
     props: { products, product }
   }
 }
+
+ProductDetails.propTypes = {
+  product: PropTypes.shape({
+    _id: PropTypes.string,
+    name: PropTypes.string,
+    details: PropTypes.string,
+    price: PropTypes.number,
+    image: PropTypes.arrayOf(PropTypes.object),
+  }).isRequired,
+
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string.isRequired,
+      name: PropTypes.string,
+      image: PropTypes.array,
+      price: PropTypes.number,
+    })
+  ).isRequired,
+};
 
 export default ProductDetails

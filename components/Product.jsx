@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Link from 'next/link';
-
 import { urlFor } from '../lib/client';
 
 const Product = ({ product: { image, name, slug, price } }) => {
@@ -19,7 +19,18 @@ const Product = ({ product: { image, name, slug, price } }) => {
         </div>
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Product
+Product.propTypes = {
+  product: PropTypes.shape({
+    image: PropTypes.array,
+    name: PropTypes.string,
+    slug: PropTypes.shape({
+      current: PropTypes.string,
+    }),
+    price: PropTypes.number,
+  }).isRequired,
+};
+
+export default Product;

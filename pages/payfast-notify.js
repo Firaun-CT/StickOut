@@ -2,6 +2,7 @@
 
 import crypto from 'crypto';
 import clientPromise from '../../lib/mongodb';
+import { Buffer } from 'buffer';
 
 export const config = {
   api: {

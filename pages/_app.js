@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types'; // <-- Import PropTypes
 import { Toaster } from 'react-hot-toast';
 
 import { Layout } from '../components';
@@ -13,7 +14,14 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </Layout>
     </StateContext>
-  )
+  );
 }
 
-export default MyApp
+// ✅ Add this:
+MyApp.propTypes = {
+  Component: PropTypes.elementType.isRequired,
+  pageProps: PropTypes.object.isRequired,
+};
+
+export default MyApp;
+

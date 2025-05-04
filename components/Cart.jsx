@@ -8,7 +8,6 @@ import { useStateContext } from '../context/StateContext';
 import { urlFor } from '../lib/client';
 
 //import PayFastForm from './PayFastForm'; // Make sure you have this component
-import { useState } from 'react';
 
 const Cart = () => {
   const cartRef = useRef();

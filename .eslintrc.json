@@ -1,4 +1,4 @@
 {
-    "env": {"node": true, "browser": true},
+    "env": {"node": true, "es2021": true, "browser": true},
     "extends": ["sanity/react"]
   }
