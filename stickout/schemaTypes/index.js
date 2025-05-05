@@ -2,5 +2,6 @@ import {defineField, defineType} from 'sanity'
 
 import product from './product';
 import banner from './banner';
+import category from './category';
 
-export const schemaTypes = [product, banner]
+export const schemaTypes = [product, banner, category]

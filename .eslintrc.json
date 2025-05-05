@@ -1,4 +1,12 @@
 {
-    "env": {"node": true, "es2021": true, "browser": true},
-    "extends": ["sanity/react"]
-  }
+  
+    "env": {
+      "browser": true,
+      "node": true,
+      "es2021": true
+    },
+
+    "extends": ["sanity/react", "next", "eslint:recommended", "plugin:react/recommended"],
+    "rules": {}
+    
+}
