@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-//import { urlFor } from '../lib/client';
-import { client } from '../lib/client';
+import { urlFor } from '../lib/client';
 
 const HeroBanner = ({ heroBanner }) => {
   const smallTextLines = heroBanner.smallText.split('\n');
@@ -20,9 +19,6 @@ const HeroBanner = ({ heroBanner }) => {
         <img src={urlFor(heroBanner.image)} alt="headphones" className="hero-banner-image" />
 
         <div>
-          <Link href={`/product/${heroBanner.product}`}>
-            <button type="button">{heroBanner.buttonText}</button>
-          </Link>
           <div className="desc">
             <h5>PRODUCTS</h5>
             <p>{heroBanner.desc}</p>

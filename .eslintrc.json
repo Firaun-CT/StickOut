@@ -1,3 +1,4 @@
+/* global process */
 {
     "env": {"node": true, "browser": true},
     "extends": ["sanity/react"]

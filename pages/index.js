@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-//import { client } from '../lib/client';
 import { client } from '../lib/client';
 
 import { Product, FooterBanner, HeroBanner } from '../components';

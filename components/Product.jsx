@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
-//import { urlFor } from '../lib/client';
-import { client } from '../lib/client';
+import { urlFor } from '../lib/client';
+//import { client } from '../lib/client';
 
 const Product = ({ product: { image, name, slug, price } }) => {
   return (
