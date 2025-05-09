@@ -1,5 +1,13 @@
 
 {
     "env": {"node": true, "browser": true},
-    "extends": ["sanity/react", "next", "next/core-web-vitals"]
+    "extends": ["sanity/react", "next", "next/core-web-vitals", "plugin:@next/next/recommended"],
+  
+
+  
+    "settings": {
+      "react": {
+        "version": "detect" // Automatically detect React version
+      }
+    }
   }
