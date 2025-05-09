@@ -1,4 +1,4 @@
-/* global process */
+
 {
     "env": {"node": true, "browser": true},
     "extends": ["sanity/react", "next", "next/core-web-vitals"]
