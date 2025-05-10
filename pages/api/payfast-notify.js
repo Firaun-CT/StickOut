@@ -68,7 +68,7 @@ export default async function handler(req, res) {
         date: new Date(),
       };
 
-      await db.collection('orders').insertOne(order);
+      await db.collection('orders').createIndex({ pf_payment_id: 1 }, { unique: true }.insertOne(order);
 
       console.log('✅ Order saved:', order);
     }
