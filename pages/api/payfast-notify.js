@@ -60,6 +60,8 @@ export default async function handler(req, res) {
       body: payloadString,  // Send the exact same payload back to PayFast for validation
     });
 
+    console.log("Payload String:", payloadString);
+
     const validateText = await validateResponse.text();  // Get the response text
 
     // Check if PayFast response is VALID
