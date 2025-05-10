@@ -7,6 +7,11 @@
       "browser": true
     },
     
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2020
+    },
+    
     "extends": [
       "sanity/react", 
       "next", 
@@ -21,7 +26,10 @@
     "root": true,
     "plugins": [
         "eslint-plugin",
-        "import"],
+        "import",
+        "react", 
+        "@next/next"
+    ],
     
     "rules": {
     "import/no-unresolved": ["error", { "commonjs": true, "amd": true }],
