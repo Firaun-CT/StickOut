@@ -11,9 +11,9 @@ export default async function handler(req, res) {
     // Your PayFast sandbox merchant credentials
     const merchant_id = '10000100'; // Replace with real or sandbox
     const merchant_key = '46f0cd694581a'; // Replace with real or sandbox
-    const return_url = 'https://stickout.vercel.co.za/success';
-    const cancel_url = 'https://stickout.vercel.co.za/cancel';
-    const notify_url = 'https://stickout.vercel/api/payfast-notify'; // optional for IPN
+    const return_url = 'https://stickout.vercel.app/success';
+    const cancel_url = 'https://stickout.vercel.app/cancel';
+    const notify_url = 'https://stickout.vercel/app/payfast-notify'; // optional for IPN
 
     // Build item description (for display only)
     //const item_names = items.map(item => `${item.name} x${item.quantity}`).join(', ');

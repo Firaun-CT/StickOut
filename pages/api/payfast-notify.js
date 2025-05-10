@@ -1,7 +1,7 @@
 // pages/api/payfast-notify.js
 
 import crypto from 'crypto';
-import clientPromise from '../lib/mongodb';
+import clientPromise from '../../lib/mongodb';
 import { Buffer } from 'buffer';
 
 export const config = {
