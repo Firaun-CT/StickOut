@@ -1,9 +1,35 @@
 
 {
-    "env": {"node": true, "browser": true},
-    "extends": ["sanity/react", "next", "next/core-web-vitals", "plugin:@next/next/recommended"],
+    "env": {
+      "node": true,
+      "es6": true,
+      "es2017": true, 
+      "browser": true
+    },
+    
+    "extends": [
+      "sanity/react", 
+      "next", 
+      "next/core-web-vitals", 
+      "plugin:@next/next/import/recommended", 
+      "eslint:recommended",
+      "plugin:eslint-plugin/recommended",
+      "plugin:import/recommended",
+      "plugin:react/recommended"
+    ],
   
-
+    "root": true,
+    "plugins": [
+        "eslint-plugin",
+        "import"],
+    
+    "rules": {
+    "import/no-unresolved": ["error", { "commonjs": true, "amd": true }],
+    "import/named": "error",
+    "import/namespace": "error",
+    "import/default": "error",
+    "import/export": "error"},
+    // etc...
   
     "settings": {
       "react": {
